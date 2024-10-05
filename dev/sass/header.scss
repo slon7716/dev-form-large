@@ -1,8 +1,11 @@
-header{
-	height: 7vh;
+header {
 	padding: 15px 0;
-	background: #222;
-	a {
-		color: #fff;
-	}
+}
+
+header {
+	nav {
+		display: flex;
+		justify-content: center;
+		gap: 26px;
+	} ;
 }

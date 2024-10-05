@@ -1,0 +1,9 @@
+header {
+  padding: 15px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}/*# sourceMappingURL=header.css.map */
