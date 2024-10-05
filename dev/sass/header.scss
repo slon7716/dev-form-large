@@ -1,11 +1,29 @@
 header {
 	padding: 15px 0;
-}
-
-header {
+	background-color: $backgraund;
 	nav {
 		display: flex;
 		justify-content: center;
-		gap: 26px;
+		gap: 36px;
 	} ;
+
+	a {
+		color: $text;
+		&:hover {
+			color: $titles;
+		}
+	}
+
+	&.header-contacts {
+		background-color: #8B4513;
+	}
+
+	.logo::after {
+		content: "";
+		background: url('../assets/img/logo-right.svg') center;
+		width: 24px;
+		height: 39px;
+		margin: 8px 0 0 -1px;
+		position: absolute;
+	}
 }

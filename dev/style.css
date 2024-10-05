@@ -15,6 +15,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
   font-family: "Geometria";
   font-size: 16px;
+  color: #8E938C;
+  background-color: #080807;
 }
 
 @font-face {
@@ -33,4 +35,36 @@ body {
 }
 h1 {
   color: blue;
+}
+
+header {
+  padding: 15px 0;
+  background-color: #4F4F4F;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+header a {
+  color: #8E938C;
+}
+header a:hover {
+  color: #F7FFEE;
+}
+header.header-contacts {
+  background-color: #42882A;
+}
+header .logo::after {
+  content: "";
+  display: block;
+  background: url("../assets/img/logo-right.svg") contain/no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+footer {
+  height: 100px;
+  margin-top: auto;
 }/*# sourceMappingURL=style.css.map */

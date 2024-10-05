@@ -1,9 +1,10 @@
 header {
   padding: 15px 0;
+  background-color: stroke;
 }
-
 header nav {
   display: flex;
   justify-content: center;
-  gap: 26px;
-}/*# sourceMappingURL=header.css.map */
+  gap: 36px;
+}
+/*# sourceMappingURL=header.css.map */
