@@ -1,6 +1,13 @@
+// @use 'variables' as *;
+
 body {
    font-family: $font-primary;
    font-size: $font-size;
    color: $text;
-   background-color: $backgraund;
+   background-color: $background;
 }
+
+h3 {
+   color: blue;
+   font-weight: 600;
+ }

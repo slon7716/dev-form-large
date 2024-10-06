@@ -32,7 +32,7 @@ const buffer = require('vinyl-buffer');
 
 // ЗАДАЧА: Компиляция препроцессора
 gulp.task('sass', function(){
-    return gulp.src(dirs.source + '/style.scss') // какой файл компилировать (путь из константы)
+    return gulp.src('C:/Users/user/Desktop/dev-form-large/dev/sass/style.scss') // какой файл компилировать (путь из константы)
     .pipe(include())
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init()) // инициируем карту кода

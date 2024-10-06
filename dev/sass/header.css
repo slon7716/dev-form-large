@@ -7,4 +7,22 @@ header nav {
   justify-content: center;
   gap: 36px;
 }
+header a {
+  color: #8E938C;
+}
+header a:hover {
+  color: #F7FFEE;
+}
+header.header-contacts {
+  background-color: #42882A;
+}
+header .logo::after {
+  content: "";
+  display: block;
+  background: url("../assets/img/logo-right.svg") contain/no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
 /*# sourceMappingURL=header.css.map */

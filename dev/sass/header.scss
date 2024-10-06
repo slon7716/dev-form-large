@@ -1,10 +1,13 @@
+// @use 'variables' as *;
+
 header {
 	padding: 15px 0;
-	background-color: $backgraund;
+	background-color: #191970;
 	nav {
 		display: flex;
 		justify-content: center;
 		gap: 36px;
+		margin-top: -20px;
 	} ;
 
 	a {
@@ -12,14 +15,24 @@ header {
 		&:hover {
 			color: $titles;
 		}
+
+		&.logo {
+			padding-left: 12px;
+		}
 	}
 
 	&.header-contacts {
-		background-color: #8B4513;
+		background-color: #800000;
+
+		a[href='tel:+38 (050) 555-55-55'] {
+			display: block;
+         padding: 12px 0 0 12px;
+         margin-bottom: -12px;
+		}
 	}
 
 	.logo::after {
-		content: "";
+		content: '';
 		background: url('../assets/img/logo-right.svg') center;
 		width: 24px;
 		height: 39px;

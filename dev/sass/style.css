@@ -12,13 +12,6 @@ Tags: custom-colors, custom-header, custom-menu, custom-logo, editor-style, feat
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-body {
-  font-family: "Geometria";
-  font-size: 16px;
-  color: #8E938C;
-  background-color: #080807;
-}
-
 @font-face {
   font-family: "Geometria";
   src: url("./assets/fonts/Geometria-Regular.ttf") format("woff");
@@ -33,18 +26,27 @@ body {
   font-style: normal;
   font-display: swap;
 }
-h1 {
+body {
+  font-family: "Geometria";
+  font-size: 16px;
+  color: #8E938C;
+  background-color: #080807;
+}
+
+h3 {
   color: blue;
+  font-weight: 600;
 }
 
 header {
   padding: 15px 0;
-  background-color: #4F4F4F;
+  background-color: #191970;
 }
 header nav {
   display: flex;
   justify-content: center;
   gap: 36px;
+  margin-top: -20px;
 }
 header a {
   color: #8E938C;
@@ -52,15 +54,23 @@ header a {
 header a:hover {
   color: #F7FFEE;
 }
+header a.logo {
+  padding-left: 12px;
+}
 header.header-contacts {
-  background-color: #42882A;
+  background-color: #800000;
+}
+header.header-contacts a[href="tel:+38 (050) 555-55-55"] {
+  display: block;
+  padding: 12px 0 0 12px;
+  margin-bottom: -12px;
 }
 header .logo::after {
   content: "";
-  display: block;
-  background: url("../assets/img/logo-right.svg") contain/no-repeat;
-  width: 50px;
-  height: 50px;
+  background: url("../assets/img/logo-right.svg") center;
+  width: 24px;
+  height: 39px;
+  margin: 8px 0 0 -1px;
   position: absolute;
 }
 
