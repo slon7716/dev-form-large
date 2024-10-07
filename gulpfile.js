@@ -32,7 +32,7 @@ const buffer = require('vinyl-buffer');
 
 // ЗАДАЧА: Компиляция препроцессора
 gulp.task('sass', function(){
-    return gulp.src('C:/Users/user/Desktop/dev-form-large/dev/sass/style.scss') // какой файл компилировать (путь из константы)
+    return gulp.src(dirs.source + '/style.scss') // какой файл компилировать (путь из константы)
     .pipe(include())
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sourcemaps.init()) // инициируем карту кода
@@ -59,7 +59,7 @@ gulp.task('html', function() {
 // ЗАДАЧА: Копирование изображений
 gulp.task('img', function () {
     return gulp.src([
-        dirs.source + '/assets/img/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
+        dirs.source + '/assets/img/**/*.{gif,png,jpg,jpeg,svg}', // какие файлы обрабатывать (путь из константы, маска имени, много расширений)
     ],
         {since: gulp.lastRun('img')} // оставим в потоке обработки только изменившиеся от последнего запуска задачи (в этой сессии) файлы
     )
