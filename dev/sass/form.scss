@@ -40,3 +40,29 @@
 .form-head {
    margin-bottom: 60px;
 }
+
+fieldset {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   margin-bottom: 60px;
+   h5 {
+      line-height: 1.7;
+      color: $stroke;
+      border-bottom: 1px solid $stroke;
+      padding-bottom: 12px;
+      margin-bottom: 10px;
+   }
+}
+
+input {
+   background-color: $system;
+   border: 1px solid $stroke;
+   border-radius: 8px;
+   line-height: 1.44;
+   padding: 30px;
+   &::placeholder {
+      font-size: 20px;
+      color: $titles;
+   }
+}
