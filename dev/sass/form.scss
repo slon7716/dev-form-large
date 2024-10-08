@@ -46,7 +46,7 @@ fieldset {
    flex-direction: column;
    gap: 30px;
    margin-bottom: 60px;
-   h5 {
+   > h5 {
       line-height: 1.7;
       color: $stroke;
       border-bottom: 1px solid $stroke;
@@ -65,4 +65,53 @@ input {
       font-size: 20px;
       color: $titles;
    }
+}
+
+.control-box {
+   margin-top: 10px;
+}
+
+.control-box__titles {
+   color: $text;
+   line-height: 1.7;
+   margin: 0 0 16px;
+   font-weight: 400;
+}
+
+.radio-box {
+   position: relative;
+}
+
+[type="radio"] {
+   display: none;
+}
+
+[type="radio"] + label {
+   font-size: 20px;
+   cursor: pointer;
+   padding-left: 42px;
+}
+
+[type="radio"] + label::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-color: $system;
+   width: 25px;
+   height: 25px;
+   border: 1px solid $stroke;
+   border-radius: 50%;
+   background-position: center;
+   transition: 0.2s;
+}
+
+[type="radio"] + label:hover:before {
+   border: 1px solid $accent;
+   border-radius: 50%;
+   background-color: $radio-button;
+}
+
+[type="radio"]:checked + label::before {
+   background: url(/assets/img/check-circle.svg) center no-repeat $radio-button;
 }
