@@ -55,6 +55,28 @@ fieldset {
    }
 }
 
+[data-display] {
+   display: none;
+}
+
+.nice-select {
+   // @extend input;
+   font-size: 20px;
+   line-height: 1.44;
+   background-color: $system;
+   border: 1px solid $stroke;
+   border-radius: 8px;
+   color: $titles;
+   padding: 27px 30px 56px;
+   .list {
+      // width: 100%;
+      background-color: $system;
+      border: 1px solid $stroke;
+      border-radius: 8px;
+      color: $titles;
+   }
+}
+
 input {
    background-color: $system;
    border: 1px solid $stroke;
@@ -64,6 +86,17 @@ input {
    &::placeholder {
       font-size: 20px;
       color: $titles;
+      transition: 0.4s;
+   }
+
+   &:focus {
+      font-size: 20px;
+      line-height: 23px;
+      color: $titles;
+      &::placeholder {
+         font-size: 1rem;
+         color: $text;
+      }
    }
 }
 
@@ -80,6 +113,8 @@ input {
 
 .radio-box {
    position: relative;
+   display: inline-block;
+   margin-right: 50px;
 }
 
 [type="radio"] {
