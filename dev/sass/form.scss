@@ -2,7 +2,7 @@
    max-width: 950px;
    width: 100%;
    margin: 0 auto;
-   background-color: rgb(2, 61, 61);
+   background-color: rgb(3, 36, 36); //$background
    h3 {
       line-height: 1.31;
       margin-bottom: 20px;
@@ -59,45 +59,89 @@ fieldset {
    display: none;
 }
 
-.nice-select {
-   // @extend input;
-   font-size: 20px;
-   line-height: 1.44;
-   background-color: $system;
-   border: 1px solid $stroke;
-   border-radius: 8px;
-   color: $titles;
-   padding: 27px 30px 56px;
-   .list {
-      // width: 100%;
-      background-color: $system;
-      border: 1px solid $stroke;
-      border-radius: 8px;
-      color: $titles;
-   }
-}
-
 input {
+   line-height: 1.44;
    background-color: $system;
    border: 1px solid $stroke;
    border-radius: 8px;
-   line-height: 1.44;
    padding: 30px;
+   cursor: pointer;
+   transition: 0.4s;
+
    &::placeholder {
       font-size: 20px;
       color: $titles;
       transition: 0.4s;
    }
 
+   &:hover {
+      border: 1px solid $stroke-focus;
+   }
+
+   &:active {
+      border: 1px solid $accent-hover;
+   }
+
    &:focus {
       font-size: 20px;
       line-height: 23px;
       color: $titles;
+      border: 1px solid $stroke-focus;
       &::placeholder {
          font-size: 1rem;
          color: $text;
       }
    }
+}
+
+.nice-select {
+   @extend input;
+   font-family: $font-primary;
+   font-size: 20px;
+   color: $titles;
+   padding: 27px 30px 56px;
+
+   .list {
+      width: 100%;
+      background-color: $system;
+      border: 1px solid $stroke;
+      border-radius: 8px;
+      color: $titles;
+
+      .option {
+         line-height: 48px;
+         min-height: 48px;
+         border-radius: 8px;
+         
+         &:hover {
+            border: 1px solid $stroke-focus;
+         }
+
+         &.selected {
+            color: $accent-hover;
+         }
+
+         &:focus {
+            border: 1px solid $stroke-focus;
+         }
+      }
+   }
+
+   &:hover {
+      border: 1px solid $stroke-focus;
+   }
+
+   &::after {
+      border-bottom: 2px solid $titles;
+      border-right: 2px solid $titles;
+      width: 8px;
+      height: 8px;
+      right: 40px;
+   }
+}
+
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+   background-color: $verification-stroke;
 }
 
 .control-box {
