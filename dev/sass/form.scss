@@ -264,5 +264,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 [type="radio"]:checked + label::before {
-   background: url(/assets/img/check-circle.svg) center no-repeat $radio-button;
+   background: url(assets/img/check-circle.svg) center no-repeat $radio-button;
+}
+
+.form-row {
+   display: flex;
+   gap: 30px;
 }

@@ -8,7 +8,7 @@ body {
   color: $text;
   background-color: $background;
   line-height: 1.4;
-  // letter-spacing: -0.2px;
+  // letter-spacing: -0.2px; увеличивает/уменьшает расстояние между буквами
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,3 +62,14 @@ h6 {
   margin-bottom: 60px;
 }
 
+::selection {
+  background-color: $accent-hover;
+  color: $background;
+}
+
+[disabled] {
+   &::selection {
+     background-color: transparent;
+     color: $background;
+   }
+}
