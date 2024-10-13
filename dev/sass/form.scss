@@ -221,10 +221,50 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .control-box__titles {
+   width: 100%;
    color: $text;
    line-height: 1.7;
    margin: 0 0 16px;
    font-weight: 400;
+}
+
+.form-row {
+   display: flex;
+   gap: 30px;
+}
+
+[type="radio"] {
+   display: none;
+
+   & + label {
+      font-size: 20px;
+      cursor: pointer;
+      padding-left: 42px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         background-color: $system;
+         width: 25px;
+         height: 25px;
+         border: 1px solid $stroke;
+         border-radius: 50%;
+         background-position: center;
+         transition: 0.2s;
+      }
+
+      &:hover::before {
+         border: 1px solid $accent;
+         border-radius: 50%;
+         background-color: $radio-button;
+      }
+   }
+
+   &:checked + label::before {
+      background: url(assets/img/check-circle.svg) center no-repeat $radio-button;
+   }
 }
 
 .radio-box {
@@ -233,41 +273,43 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    margin-right: 50px;
 }
 
-[type="radio"] {
-   display: none;
-}
-
-[type="radio"] + label {
-   font-size: 20px;
-   cursor: pointer;
-   padding-left: 42px;
-}
-
-[type="radio"] + label::before {
-   content: "";
-   position: absolute;
-   left: 0;
-   top: 0;
-   background-color: $system;
-   width: 25px;
-   height: 25px;
-   border: 1px solid $stroke;
-   border-radius: 50%;
-   background-position: center;
-   transition: 0.2s;
-}
-
-[type="radio"] + label:hover:before {
-   border: 1px solid $accent;
-   border-radius: 50%;
-   background-color: $radio-button;
-}
-
-[type="radio"]:checked + label::before {
-   background: url(assets/img/check-circle.svg) center no-repeat $radio-button;
-}
-
-.form-row {
+.large-radio {
    display: flex;
-   gap: 30px;
+   flex-wrap: wrap;
+
+   .control-box__titles {
+         width: 100%;
+   }
+
+   .form-row {
+      width: 100%;
+   }
+
+   .radio-box {
+      width: 100%;
+      margin: 0;
+   }
+
+   [type="radio"] + label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 104px;
+      padding: 24px 40px;
+      font-size: 18px;
+      text-align: center;
+
+      &::before {
+         inset: 0;
+         width: auto;
+         height: auto;
+         border-radius: 12px;
+         z-index: -1;
+      }
+   }
+
+   [type="radio"]:checked + label::before {
+      background: none;
+   }
+   
 }

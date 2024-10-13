@@ -41,6 +41,30 @@
          <input type="text" placeholder="індекс" data-index>
       </div>
    </fieldset>
+   <fieldset>
+      <h5>підтвердження особистості</h5>
+      <div class="control-box large-radio">
+         <h5 class="control-box__titles">тип документу</h5>
+         <div class="form-row">
+            <div class="radio-box">
+               <input id="passport" type="radio" name="document">
+               <label for="passport">паспорт</label>
+            </div>
+            <div class="radio-box">
+               <input id="foreign-passport" type="radio" name="document">
+               <label for="foreign-passport">закордонний паспорт</label>
+            </div>
+            <div class="radio-box">
+               <input id="id-card" type="radio" name="document">
+               <label for="id-card">id-картка</label>
+            </div>
+            <div class="radio-box">
+               <input id="driver-license" type="radio" name="document">
+               <label for="driver-license">посвідчення водія</label>
+            </div>
+         </div>
+      </div>
+   </fieldset>
    <!-- @@include('templates/drop-zone.html') -->
 </form>
 
