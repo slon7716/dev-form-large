@@ -32,7 +32,7 @@
 
 .form-description {
    max-width: 705px;
-   font-size: 20px;
+   font-size: 1.25rem;
    font-weight: 400;
    line-height: 34px;
 }
@@ -46,13 +46,20 @@ fieldset {
    flex-direction: column;
    gap: 30px;
    margin-bottom: 60px;
+
    > h5 {
+      font-weight: 400;
       line-height: 1.7;
       color: $stroke;
       border-bottom: 1px solid $stroke;
       padding-bottom: 12px;
       margin-bottom: 10px;
+
+      &:nth-of-type(2) {
+         color: $stroke-focus;
+      }
    }
+
 }
 
 [data-display] {
@@ -61,7 +68,7 @@ fieldset {
 
 input {
    width: 100%;
-   font-size: 20px;
+   font-size: 1.25rem;
    line-height: 1.16;
    color: $titles;
    background-color: $system;
@@ -72,7 +79,7 @@ input {
    transition: 0.4s;
 
    &::placeholder {
-      font-size: 20px;
+      font-size: 1.25rem;
       color: $titles;
       transition: 0.4s;
    }
@@ -86,7 +93,7 @@ input {
    }
 
    &:focus {
-      font-size: 20px;
+      font-size: 1.25rem;
       line-height: 23px;
       color: $titles;
       border: 1px solid $stroke-focus;
@@ -153,7 +160,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .nice-select {
    @extend input;
    font-family: $font-primary;
-   font-size: 20px;
+   font-size: 1.25rem;
    color: $titles;
    padding: 27px 30px 56px;
 
@@ -216,15 +223,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    background-color: $verification-stroke;
 }
 
-.control-box {
-   margin-top: 10px;
-}
-
 .control-box__titles {
    width: 100%;
    color: $text;
    line-height: 1.7;
-   margin: 0 0 16px;
+   margin: 0 0 20px;
    font-weight: 400;
 }
 
@@ -237,7 +240,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    display: none;
 
    & + label {
-      font-size: 20px;
+      font-size: 1.25rem;
       cursor: pointer;
       padding-left: 42px;
 
@@ -252,7 +255,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
          border: 1px solid $stroke;
          border-radius: 50%;
          background-position: center;
-         transition: 0.2s;
+         transition: 0.4s;
       }
 
       &:hover::before {
@@ -276,10 +279,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .large-radio {
    display: flex;
    flex-wrap: wrap;
-
-   .control-box__titles {
-         width: 100%;
-   }
 
    .form-row {
       width: 100%;
@@ -312,4 +311,48 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       background: none;
    }
    
+}
+
+input#file-input {
+   display: none;
+}
+
+#drop-zone {
+   label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 171px;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%234F4F4FFF' stroke-width='3' stroke-dasharray='15%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      border-radius: 12px;
+      border-radius: 12px;
+      padding: 24px;
+      transition: 0.4s;
+      cursor: pointer;
+
+      &:hover {
+         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%239AF03CFF' stroke-width='3' stroke-dasharray='15%2c 15' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+border-radius: 12px;
+      }
+
+      > span {
+         color: $stroke;
+         line-height: 20px;
+         font-size: 1rem;
+         font-weight: 400;
+
+         &:first-child {
+            font-size: 1.125rem;
+            line-height: 23px;
+            font-weight: 500;
+            color: $titles;
+         }
+         
+      span.color-accent {
+            color: $accent;
+         }
+      }
+   }
 }
