@@ -375,6 +375,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    
 }
 
+#drop-zone {
+   margin-bottom: 10px;
+}
+
 input#file-input {
    display: none;
 }
@@ -412,8 +416,22 @@ border-radius: 12px;
          }
          
       span.color-accent {
-            color: $accent;
+            color: $accent-hover;
          }
       }
+   }
+}
+
+.btn-large {
+   font-size: 1.125rem;
+   font-weight: 500;
+   color: $system;
+   padding: 31.38px;
+   background-color: $accent-second;
+   border: 1px solid $stroke;
+   border-radius: 8px;
+
+   &:hover {
+      background-color: $accent-hover;
    }
 }

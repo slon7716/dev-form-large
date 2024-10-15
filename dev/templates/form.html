@@ -14,11 +14,11 @@
    </fieldset>
    <fieldset>
       <h5>особиста інформація</h5>
-      <input type="text" placeholder="ім'я">
-      <input type="text" placeholder="прізвище">
-      <input type="text" placeholder="по-батькові">
-      <input type="tel" placeholder="телефон">
-      <input type="text" placeholder="дата народження" data-calendar>
+      <input type="text" placeholder="ім'я" name="personal">
+      <input type="text" placeholder="прізвище" name="personal">
+      <input type="text" placeholder="по-батькові" name="personal">
+      <input type="tel" placeholder="телефон" name="personal">
+      <input type="text" placeholder="дата народження" name="personal" data-calendar>
       <div class="control-box">
          <h5 class="control-box__titles">стать</h5>
          <div class="radio-box">
@@ -33,12 +33,12 @@
    </fieldset>
    <fieldset>
       <h5>адреса проживання</h5>
-      <input type="text" placeholder="місто">
-      <input type="text" placeholder="вулиця">
+      <input type="text" placeholder="місто" name="adress">
+      <input type="text" placeholder="вулиця" name="adress">
       <div class="form-row">
-         <input type="text" placeholder="будинок">
-         <input type="text" placeholder="квартира">
-         <input type="text" placeholder="індекс" data-index>
+         <input type="text" placeholder="будинок" name="adress">
+         <input type="text" placeholder="квартира" name="adress">
+         <input type="text" placeholder="індекс" name="adress" data-index>
       </div>
    </fieldset>
    <fieldset>
@@ -68,14 +68,12 @@
       @@include('drop-zone.html')
       <div class="control-box toggle-checkbox">
          <div class="radio-box">
-            <input id="female1" type="checkbox" checked name="gender">
-            <label for="female1">немає терміну дії <span>за умови відсутності терміну дії документу</span></label>
-         </div>
-         <div class="radio-box">
-            <input id="male1" type="checkbox" name="gender">
-            <label for="male1">чоловіча</label>
+            <input id="validity-period" type="checkbox" name="validity-period">
+            <label for="validity-period">немає терміну дії <span>за умови відсутності терміну дії документу</span></label>
          </div>
       </div>
+      <input type="text" placeholder="термін дії документу" name="validity-period" data-calendar>
+      <button type="button" class="btn-large">продовжити</button>
    </fieldset>
 </form>
 
