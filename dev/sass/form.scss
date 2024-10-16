@@ -125,14 +125,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    width: 328px;
 }
 
+.ui-datepicker.ui-widget.ui-widget-content {
+   border: 2px solid $stroke;
+}
+
 .ui-datepicker table {
    font-size: 1rem;
 }
 
-.ui-widget-header {
+.ui-datepicker .ui-datepicker-header {
+   padding: 18px 0 5px;
    font-weight: 400;
    background: $system;
    color: $title;
+   border: none;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+   top: 18px;
 }
 
 .ui-datepicker-prev, .ui-datepicker-prev:hover {
@@ -151,10 +161,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .ui-widget-content {
    background: $system;
-}
-
-.ui-widget.ui-widget-content {
-   border: 1px solid $stroke;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
