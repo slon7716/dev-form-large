@@ -97,6 +97,7 @@ input {
       line-height: 1.15;
       color: $title;
       border: 1px solid $stroke-focus;
+
       &::placeholder {
          font-size: 1rem;
          color: $text;
@@ -262,8 +263,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
    & + label {
       font-size: 1.25rem;
-      cursor: pointer;
+      color: $title;
       padding-left: 42px;
+      cursor: pointer;
 
       span {
          font-size: 1rem;
@@ -301,7 +303,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    }
 
    &:checked:not([type="radio"]) + label::before {
-         background: url(assets/img/check-mark.svg) center no-repeat    $radio-button;
+         background: url(assets/img/check-mark.svg) center no-repeat $radio-button;
       }
 }
 
@@ -309,6 +311,53 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    position: relative;
    display: inline-block;
    margin-right: 50px;
+}
+
+.large-radio {
+   display: flex;
+   flex-wrap: wrap;
+
+   .form-row {
+      width: 100%;
+   }
+
+   .radio-box {
+      width: 100%;
+      margin: 0;
+   }
+
+   [type="radio"] + label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 104px;
+      padding: 24px 40px;
+      font-size: 1.125rem;
+      border: 1px solid #4F4F4F;
+      border-radius: 12px;
+      transition: 0.3s;
+
+      &::before {
+         inset: 0;
+         width: auto;
+         height: auto;
+         border-radius: 12px;
+         z-index: -1;
+      }
+
+   }
+
+   [type=radio]:hover + label {
+      border: 1px solid $accent;
+      background-color: $system;
+   }
+
+   [type=radio]:checked + label {
+      background-color: $radio-button;
+      border-color: $accent;
+  }
+   
 }
 
 .toggle-checkbox .radio-box{
@@ -356,43 +405,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
          }
       }
    }
-}
-
-.large-radio {
-   display: flex;
-   flex-wrap: wrap;
-
-   .form-row {
-      width: 100%;
-   }
-
-   .radio-box {
-      width: 100%;
-      margin: 0;
-   }
-
-   [type="radio"] + label {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 104px;
-      padding: 24px 40px;
-      font-size: 18px;
-      text-align: center;
-
-      &::before {
-         inset: 0;
-         width: auto;
-         height: auto;
-         border-radius: 12px;
-         z-index: -1;
-      }
-   }
-
-   [type="radio"]:checked + label::before {
-      background: none;
-   }
-   
 }
 
 #drop-zone {
