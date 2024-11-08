@@ -1,7 +1,12 @@
 <form class="form-verification">
    <div class="form-head">
-      <h3>верифікація<span class="verification-status verification-status__verification-failed">верифікацію не
-            пройдено</span></h3>
+      <h3>верифікація
+         <span class="verification-status verification-status__verification-failed">верифікацію не пройдено</span>
+         <span class="verification-status verification-status__not-verified">не верифікований</span>
+         <span class="verification-status verification-status__under-consideration">заявка розглядається</span>
+         <span class="verification-status verification-status__verified">верифікований</span>
+         <!-- для інших статусів верифікації -->
+      </h3>
       <div class="form-description">Пройдіть верифікацію особи та отримайте можливість здійснювати обмін фіатних валют
          та доступ до реферальної програми</div>
    </div>
@@ -54,7 +59,10 @@
             </div>
             <div class="radio-box">
                <input id="foreign-passport" type="radio" name="document">
-               <label for="foreign-passport">закордонний паспорт</label>
+               <label for="foreign-passport">
+                  <span>закордонний</span>
+                  <span>паспорт</span>
+               </label>
             </div>
             <div class="radio-box">
                <input id="id-card" type="radio" name="document">
@@ -62,7 +70,10 @@
             </div>
             <div class="radio-box">
                <input id="driver-license" type="radio" name="document">
-               <label for="driver-license">посвідчення водія</label>
+               <label for="driver-license">
+                  <span>посвідчення</span>
+                  <span>водія</span>
+               </label>
             </div>
          </div>
       </div>
@@ -71,18 +82,10 @@
       <div class="control-box toggle-checkbox">
          <div class="radio-box">
             <input id="validity-period" type="checkbox" name="validity-period">
-            <label for="validity-period">немає терміну дії <span>за умови відсутності терміну дії
-                  документу</span></label>
+            <label for="validity-period">немає терміну дії <span>за умови відсутності терміну дії документу</span></label>
          </div>
       </div>
       <input type="text" placeholder="термін дії документу" name="validity-period" data-calendar>
-      <button class="btn-large">продовжити</button>
    </fieldset>
+   <button class="btn-large">продовжити</button>
 </form>
-
-
-
-<!-- <span class="verification-status verification-status__not-verified">не верифікований</span>
-      <span class="verification-status verification-status__under-consideration">заявка розглядається</span>
-      <span class="verification-status verification-status__verified">верифікований</span>
-       - для інших статусів верифікації  -->

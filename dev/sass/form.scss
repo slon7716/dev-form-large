@@ -3,42 +3,44 @@
    width: 100%;
    margin: 0 auto;
    background-color: $background;
-   h3 {
-      line-height: 1.31;
-      margin-bottom: 20px;
-   }
-}
-
-.verification-status {
-   display: inline-block;
-   border: 1px solid $verification-stroke;
-   border-radius: 3px;
-   height: 32px;
-   padding: 6px 10px;
-   font-size: 1rem;
-   font-weight: 400;
-   margin-left: 30px;
-
-   &__under-consideration {
-      color: $verification;
-   }
-   &__verification-failed {
-      color: $errors;
-   }
-   &__verified {
-      color: $accent;
-   }
-}
-
-.form-description {
-   max-width: 705px;
-   font-size: 1.25rem;
-   font-weight: 400;
-   line-height: 1.7;
 }
 
 .form-head {
    margin-bottom: 60px;
+
+   h3 {
+      line-height: 1.31;
+      margin-bottom: 20px;
+      color: $title;
+   }
+   
+   .verification-status {
+      display: inline-block;
+      border: 1px solid $verification-stroke;
+      border-radius: 3px;
+      height: 32px;
+      padding: 6px 10px;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-left: 30px;
+   
+      &__under-consideration {
+         color: $verification;
+      }
+      &__verification-failed {
+         color: $errors;
+      }
+      &__verified {
+         color: $accent;
+      }
+   }
+
+   .form-description {
+      max-width: 705px;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.7;
+   }
 }
 
 fieldset {
@@ -47,19 +49,21 @@ fieldset {
    gap: 30px;
    margin-bottom: 60px;
 
-   > h5 {
+   > h5:first-child {
       font-weight: 400;
       line-height: 1.7;
       color: $stroke;
       border-bottom: 1px solid $stroke;
       padding-bottom: 12px;
       margin-bottom: 10px;
-
-      &:nth-of-type(2) {
-         color: $stroke-focus;
-      }
    }
 
+   > h5:nth-of-type(2) {
+      color: $stroke-focus;
+      font-weight: 400;
+      line-height: 1.7;
+      margin: 10px 0 -10px;
+   }
 }
 
 [data-display] {
@@ -68,6 +72,7 @@ fieldset {
 
 input {
    width: 100%;
+   font-family: $font-primary;
    font-size: 1.25rem;
    line-height: 1.16;
    color: $title;
@@ -79,6 +84,7 @@ input {
    transition: 0.4s;
 
    &::placeholder {
+      font-family: $font-primary;
       font-size: 1.25rem;
       color: $title;
       transition: 0.4s;
@@ -177,11 +183,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .ui-state-hover:hover {
    border: 1px solid $accent-hover;
- } 
+} 
 
 .nice-select {
    @extend input;
-   font-family: $font-primary;
    font-size: 1.25rem;
    color: $title;
    padding: 27px 30px 56px;
@@ -197,7 +202,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
          position: relative;
          text-align: center;
          line-height: 48px;
-         min-height: 48px;
          border-radius: 8px;
 
          &::after {
@@ -322,21 +326,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    }
 
    .radio-box {
-      width: 100%;
+      width: 25%;
       margin: 0;
    }
 
    [type="radio"] + label {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       height: 104px;
-      padding: 24px 40px;
+      padding: 0;
       font-size: 1.125rem;
+      line-height: 1.556;
       border: 1px solid #4F4F4F;
       border-radius: 12px;
-      transition: 0.3s;
+      transition: 0.4s;
+      
+      span {
+         font-size: 1.125rem;
+         color: $title;
+      }
 
       &::before {
          inset: 0;
@@ -345,7 +356,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
          border-radius: 12px;
          z-index: -1;
       }
-
    }
 
    [type=radio]:hover + label {
@@ -360,7 +370,54 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    
 }
 
-.toggle-checkbox .radio-box{
+#drop-zone {
+   margin-bottom: 10px;
+}
+
+input#file-input {
+   display: none;
+}
+
+#drop-zone label {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   min-height: 171px;
+   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%234F4F4FFF' stroke-width='3' stroke-dasharray='15%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+   border-radius: 12px;
+   padding: 24px;
+   transition: 0.4s;
+   cursor: pointer;
+
+   &:hover {
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%239AF03CFF' stroke-width='3' stroke-dasharray='15%2c 15' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
+      border-radius: 12px;
+   }
+
+   span {
+      font-size: 1.125rem;
+      line-height: 1.28;
+      font-weight: 500;
+      color: $title;
+   }
+
+   .hide-on-small {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $stroke;
+   }
+      
+   .color-accent {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $accent;
+   }
+}
+
+
+.toggle-checkbox .radio-box {
    [type="checkbox"] {
       + label {
          padding-left: 77px;
@@ -407,67 +464,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    }
 }
 
-#drop-zone {
-   margin-bottom: 10px;
-}
-
-input#file-input {
-   display: none;
-}
-
-#drop-zone {
-   label {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      min-height: 171px;
-      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%234F4F4FFF' stroke-width='3' stroke-dasharray='15%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-      border-radius: 12px;
-      border-radius: 12px;
-      padding: 24px;
-      transition: 0.4s;
-      cursor: pointer;
-
-      &:hover {
-         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%239AF03CFF' stroke-width='3' stroke-dasharray='15%2c 15' stroke-dashoffset='10' stroke-linecap='square'/%3e%3c/svg%3e");
-border-radius: 12px;
-      }
-
-      > span {
-         color: $stroke;
-         font-size: 1rem;
-         font-weight: 400;
-
-         &:first-child {
-            font-size: 1.125rem;
-            line-height: 1.28;
-            font-weight: 500;
-            color: $title;
-         }
-         
-      span.color-accent {
-            color: $accent;
-         }
-      }
-   }
-}
-
 .btn-large {
+   width: 100%;
+   font-family: $font-primary;
    font-size: 1.125rem;
    font-weight: 500;
+   line-height: 1.278;
    color: $system;
-   padding: 31.38px;
+   padding: 30px;
    background-color: $accent;
-   border: 1px solid $stroke;
+   border: none;
    border-radius: 8px;
 
    &:hover {
       background-color: $accent-hover;
+      border: 2px solid $stroke-focus;
    }
-}
-
-input[data-calendar][name="validity-period"] {
-   margin-bottom: 30px;
 }
