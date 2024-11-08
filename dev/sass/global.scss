@@ -42,6 +42,19 @@ h6 {
 
 .wrapper {
    padding: 40px;
+   
+   > a {
+   	font-size: 2rem;
+   }
+}
+
+.header-contacts {
+	background-color: #800000;
+}
+
+.map {
+   width: 100vh;
+   height: 600px;
 }
 
 .container {
@@ -49,11 +62,6 @@ h6 {
    width: 100%;
    padding: 0 12px;
    margin: 0 auto;
-}
-
-.map {
-   width: 100vh;
-   height: 600px;
 }
 
 .page-title {
