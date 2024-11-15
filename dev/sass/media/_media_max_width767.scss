@@ -73,7 +73,7 @@
       }
    }
    
-   [type="radio"], [type="checkbox"] {
+   [type='radio'], [type='checkbox'] {
       & + label {
          font-size: 0.875rem;
          padding-left: 39px;
@@ -116,7 +116,7 @@
       }
    }
 
-   .large-radio [type=radio] + label {
+   .large-radio [type='radio'] + label {
       display: flex;
       height: 68px;
       font-size: 0.875rem;
@@ -147,7 +147,7 @@
       }
    }
 
-   .toggle-checkbox .radio-box [type=checkbox] + label {
+   .toggle-checkbox .radio-box [type='checkbox'] + label {
       height: 41px;
       padding-left: 68px;
       font-size: 0.9375rem;
@@ -162,5 +162,9 @@
       font-size: 1rem;
       line-height: 1.5;
       padding: 23px;
+   }
+
+   .calendar-container img {
+      top: 25px;
    }
 }

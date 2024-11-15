@@ -24,7 +24,7 @@ if (document.querySelector("#drop-zone")) {
     }
   
     function updateThumbnail(file) {
-      dataDisplay.textContent = file.name;
+      dataDisplay.innerHTML += `<p>${file.name}</p>`;
     }
   
     dropZone.addEventListener("dragover", handleDragOver);

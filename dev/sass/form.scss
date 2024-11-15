@@ -111,8 +111,8 @@ input {
    }
 }
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
 }
@@ -262,7 +262,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    gap: 30px;
 }
 
-[type="radio"], [type="checkbox"] {
+[type='radio'], [type='checkbox'] {
    display: none;
 
    & + label {
@@ -300,13 +300,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       background: url(assets/img/check-circle.svg) center no-repeat $radio-button;
    }
 
-   &:not([type="radio"]) + label {
+   &:not([type='radio']) + label {
       &::before {
          border-radius: 4px;
       }
    }
 
-   &:checked:not([type="radio"]) + label::before {
+   &:checked:not([type='radio']) + label::before {
          background: url(assets/img/check-mark.svg) center no-repeat $radio-button;
       }
 }
@@ -330,7 +330,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       margin: 0;
    }
 
-   [type="radio"] + label {
+   [type='radio'] + label {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -358,12 +358,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       }
    }
 
-   [type=radio]:hover + label {
+   [type='radio']:hover + label {
       border: 1px solid $accent;
       background-color: $system;
    }
 
-   [type=radio]:checked + label {
+   [type='radio']:checked + label {
       background-color: $radio-button;
       border-color: $accent;
   }
@@ -416,9 +416,8 @@ input#file-input {
    }
 }
 
-
 .toggle-checkbox .radio-box {
-   [type="checkbox"] {
+   [type='checkbox'] {
       + label {
          padding-left: 77px;
          display: flex;
