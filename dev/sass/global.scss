@@ -1,3 +1,7 @@
+html {
+   font-size: 16px; // 1rem = 16px
+}
+
 * {
    box-sizing: border-box;
 }
@@ -52,10 +56,21 @@ h6 {
 	background-color: #800000;
 }
 
-.map {
-   width: 100vh;
-   height: 600px;
-}
+.map-container {
+   position: relative;
+   width: 100%; /* Карта занимает всю ширину контейнера */
+   padding-top: 56.25%; /* Соотношение сторон 16:9 (56.25% = 9/16 * 100) */
+   overflow: hidden;
+ }
+ 
+ .map {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   // border: none;
+ }
 
 .container {
    max-width: 1442px;
