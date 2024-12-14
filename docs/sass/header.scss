@@ -1,0 +1,40 @@
+header {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 147px;
+	padding: 0 50px;
+
+	span {
+		font-size: 2rem;
+		font-weight: 600;
+		line-height: 1.4;
+		margin: 10px 34px 0;
+		color: #fff;
+	}
+	
+	nav {
+		display: flex;
+		gap: 32px;
+		margin-left: auto;
+
+		a {
+			font-size: 1.5rem;
+			color: $text;
+	
+			&:hover {
+				color: $title;
+			}
+		}	
+	}
+
+	.logo::after {
+		content: '';
+		background: url('assets/img/logo-right.svg') center;
+		width: 24px;
+		height: 39px;
+		margin-top: 8px;
+		position: absolute;
+	}
+}
+
