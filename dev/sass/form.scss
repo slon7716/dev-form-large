@@ -99,9 +99,6 @@ input {
    }
 
    &:focus {
-      font-size: 1.25rem;
-      line-height: 1.15;
-      color: $title;
       border: 1px solid $stroke-focus;
 
       &::placeholder {
@@ -187,9 +184,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .nice-select {
    @extend input;
-   font-size: 1.25rem;
-   color: $title;
-   padding: 27px 30px 56px;
+   padding: 30px 30px 53px;
 
    .list {
       width: 100%;
@@ -289,15 +284,19 @@ input[type='date']::-webkit-calendar-picker-indicator {
          transition: 0.4s;
       }
 
-      &:hover::before {
-         border: 1px solid $accent;
-         border-radius: 50%;
-         background-color: $radio-button;
+      &:hover {
+         &::before {
+            border: 1px solid $accent;
+            border-radius: 50%;
+            background-color: $radio-button;
+         }
       }
    }
    
-   &:checked + label::before {
-      background: url(assets/img/check-circle.svg) center no-repeat $radio-button;
+   &:checked + label {
+      &::before {
+         background: url(assets/img/check-circle.svg) center no-repeat $radio-button;
+      }
    }
 
    &:not([type='radio']) + label {
@@ -306,9 +305,11 @@ input[type='date']::-webkit-calendar-picker-indicator {
       }
    }
 
-   &:checked:not([type='radio']) + label::before {
+   &:checked:not([type='radio']) + label {
+      &::before {
          background: url(assets/img/check-mark.svg) center no-repeat $radio-button;
       }
+   }
 }
 
 .radio-box {
@@ -438,14 +439,16 @@ input#file-input {
             content: "";
             width: 20px;
             height: 20px;
+            position: absolute;
             left: 6px;
             top: 50%;
             transform: translate(0, -50%);
-            position: absolute;
             border-radius: 50%;
             background-color: $title;
+            transition: 0.4s;
          }
       }
+      
       &:checked {
          + label {
             &::before {
@@ -453,7 +456,6 @@ input#file-input {
             }
 
             &::after {
-               content: "";
                left: 30px;
                background-color: $accent;
                transition: 0.4s;

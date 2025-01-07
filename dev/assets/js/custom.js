@@ -8,5 +8,5 @@ $(document).ready(function() {
       showOn: 'button',
       buttonImage: 'assets/img/calendar-icon.svg',
       buttonImageOnly: true,
-    });
+   });
 })

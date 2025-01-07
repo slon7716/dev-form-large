@@ -61,16 +61,15 @@ h6 {
    width: 100%; /* Карта занимает всю ширину контейнера */
    padding-top: 56.25%; /* Соотношение сторон 16:9 (56.25% = 9/16 * 100) */
    overflow: hidden;
- }
+}
  
- .map {
+.map {
    position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
-   // border: none;
- }
+}
 
 .container {
    max-width: 1442px;
