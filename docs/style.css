@@ -252,9 +252,6 @@ input:active, .nice-select:active {
   border: 1px solid #9AF03C;
 }
 input:focus, .nice-select:focus {
-  font-size: 1.25rem;
-  line-height: 1.15;
-  color: #F7FFEE;
   border: 1px solid #8E938C;
 }
 input:focus::placeholder, .nice-select:focus::placeholder {
@@ -337,9 +334,7 @@ input[type=date]::-webkit-calendar-picker-indicator,
 }
 
 .nice-select {
-  font-size: 1.25rem;
-  color: #F7FFEE;
-  padding: 27px 30px 56px;
+  padding: 30px 30px 53px;
 }
 .nice-select .list {
   width: 100%;
@@ -555,18 +550,18 @@ input#file-input, #file-input.nice-select {
   content: "";
   width: 20px;
   height: 20px;
+  position: absolute;
   left: 6px;
   top: 50%;
   transform: translate(0, -50%);
-  position: absolute;
   border-radius: 50%;
   background-color: #F7FFEE;
+  transition: 0.4s;
 }
 .toggle-checkbox .radio-box [type=checkbox]:checked + label::before {
   background: none;
 }
 .toggle-checkbox .radio-box [type=checkbox]:checked + label::after {
-  content: "";
   left: 30px;
   background-color: #B1FF5C;
   transition: 0.4s;
